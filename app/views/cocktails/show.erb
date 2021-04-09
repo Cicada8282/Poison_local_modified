@@ -1,0 +1,36 @@
+<div class="container">
+    <h1><%= @cocktail.name %></h1><br>
+    <img style="float:left; margin-right:100px" src="<%=@cocktail.image%>" class="img-thumbnail" alt="<%=@cocktail.name%>">
+    <div style="text-align: left; padding-top:100px;">
+        <h3>Glass: </h3>
+        <p><%= @cocktail.glass %></p>
+    
+        <h3>Ingredient: </h3>
+        <%ingre=@cocktail.ingredient.split(",")%> 
+        <%ingre.each do |ing|%>
+            <p><%= ing %></p>
+        <%end%>
+    
+        <h3>Instruction: </h3>
+        <p><%= @cocktail.instruction %></p>
+    </div>
+
+    <% if logged_in? && current_user.id==@cocktail.user_id%>
+        <form action="/cocktails/<%= @cocktail.id %>/edit" method="get">
+            <input type="submit" value="Edit Cocktail">
+        </form>
+        <form action="/cocktails/<%= @cocktail.id %>" method="post">
+            <input type="hidden" name="_method" value="delete"> 
+            <input type="submit" value="Delete Cocktail">
+        </form>
+    <%elsif logged_in? && current_user.id!=@cocktail.user_id %>
+        <form action="/cocktails" method="post">
+            <input type="hidden" name="cocktail[name]" value="<%=@cocktail.name%>">
+            <input type="hidden" name="cocktail[glass]" value="<%=@cocktail.glass%>">
+            <input type="hidden" name="cocktail[ingredient]" value="<%=@cocktail.ingredient%>">
+            <input type="hidden" name="cocktail[instruction]" value="<%=@cocktail.instruction%>">
+            <input type="hidden" name="cocktail[image]" value="<%=@cocktail.image%>">
+            <input type="submit" value="Add Cocktail to my list">
+        </form>
+    <%end%>
+</div>
