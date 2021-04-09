@@ -5,7 +5,7 @@ Poison is cocktail website. Guest can see a list of cocktails and the individual
 ## Install
 ### Clone the repository
 ```
-git clone git@github.com:Cicada0315/Poison_local_modified.git
+git clone git@github.com:Cicada8282/Poison_local_modified.git
 cd Poison_local_modified
 ```
 ### Install gem
