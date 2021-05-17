@@ -3,9 +3,12 @@
 Poison is cocktail website. Guest can see a list of cocktails and the individual ingredient to make cocktails. People can also make an account to do utiliize more features such as store their favorite cocktail and even they can upload their own cocktails. This is improved version of previous Website. 
 
 ## Install
-### Clone the repository
+### Access to the Project
 ```
 git clone git@github.com:Cicada8282/Poison_local_modified.git
+cd Poison_local_modified
+or 
+Download as zip and extract 
 cd Poison_local_modified
 ```
 ### Install gem
