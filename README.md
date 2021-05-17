@@ -47,6 +47,6 @@ User can add new cocktails.
 https://www.thecocktaildb.com/
 
 ## MIT License
-https://github.com/Cicada0315/Poison/blob/main/LICENSE
+https://github.com/Cicada8282/Poison_local_modified/blob/main/LICENSE
 
 ## Welcome to Poison and enjoy the website!
